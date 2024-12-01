@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="Logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <title>Audio Text</title>
+    <style>
+      body {
+        background-image: url("back.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+      .navbar img {
+        height: 40px;
+      }
+      .container {
+        margin-top: 60px; /* Add top margin to prevent overlap with navbar */
+        flex-grow: 1;
+      }
+      .footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .footer a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="logo.png" alt="Logo" />
+    </nav>
+    <div class="container">
+      <p class="heading">Audio to Text</p>
+      <div class="options">
+        <div class="language">
+          <p>Pilih Bahasa</p>
+          <select name="input-language" id="language"></select>
+        </div>
+      </div>
+      <div class="line"></div>
+      <button class="btn record">
+        <p>Start Listening</p>
+      </button>
+      <p class="heading">Result :</p>
+      <div
+        class="result"
+        contenteditable="true"
+        spellcheck="false"
+        placeholder="Text will be shown here"
+      >
+        <p class="interim"></p>
+      </div>
+      <div class="buttons">
+        <button class="btn clear">
+          <ion-icon name="icon-name"></ion-icon>
+          <span>Clear</span>
+        </button>
+        <button class="btn copy-text">
+          <ion-icon name="copy-outline"></ion-icon>
+          <p>Copy Text</p>
+        </button>
+        <div class="social-section">
+          <h3>Custom?</h3>
+          <p>Contact me on :</p>
+          <div class="social-icons">
+            <a
+              href="https://www.instagram.com/ihfan_sholih"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/share/19VHrsG2ou"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com/@simbah_research"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a
+              href="https://wa.me/62895626314747"
+              target="_blank"
+              class="social-icon"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <footer class="footer">
+          <a
+            href="https://simbah-research.github.io/Portfolio/"
+            target="_blank"
+          >
+            <span>&copy; 2024 | Si'Mbah_Research</span>
+          </a>
+        </footer>
+      </div>
+    </div>
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- LANGUAGES -->
+    <script src="languages.js"></script>
+
+    <!-- SCRIPT -->
+    <script src="script.js"></script>
+  </body>
+</html>
